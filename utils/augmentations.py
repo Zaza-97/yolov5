@@ -40,7 +40,7 @@ class Albumentations:
             self.transform = A.Compose(T, bbox_params=A.BboxParams(format='yolo', label_fields=['class_labels']))
             '''
             T = [
-                A.CenterCrop(width=size, height=size,always_apply=True, p=1.0),
+                A.RandomCrop(width=size, height=size,always_apply=True, p=1.0),
                 A.Blur(p=0.01),
                 A.MedianBlur(p=0.01),
                 A.ToGray(p=0.01),
