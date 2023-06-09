@@ -21,7 +21,7 @@ IMAGENET_STD = 0.229, 0.224, 0.225  # RGB standard deviation
 
 class Albumentations:
     # YOLOv5 Albumentations class (optional, only used if package is installed)
-    def __init__(self, size=640):
+    def __init__(self, size=608):
         self.transform = None
         prefix = colorstr('albumentations: ')
         try:
